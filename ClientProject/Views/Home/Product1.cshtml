@@ -1,0 +1,148 @@
+﻿
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Product Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .product-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-details {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .product-description {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+
+        .product-features {
+            margin-top: 20px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+            .product-features li {
+                margin-bottom: 10px;
+                font-size: 1.1em;
+                color: #495057;
+            }
+
+        .product-price {
+            margin-top: 20px;
+            font-size: 1.8em;
+            color: #28a745;
+        }
+
+        .btn-primary {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+
+            .btn-primary:hover {
+                background: linear-gradient(45deg, #0056b3, #007bff);
+                box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+                transform: translateY(-3px);
+            }
+
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    @*<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>*@
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image">
+                    <img src="/Images/OIP (2).jpg" alt="Product Image" class="img-fluid rounded">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-details">
+                    <h2 class="product-title">Tiles Installation Service</h2>
+                    <h3>100 INR/Square Foot</h3>
+                    <p class="product-description">This is a short description of the product. It provides an overview of the features and benefits.</p>
+                    <ul class="product-features">
+                        <li>Tiles Installation Services Price And Quantity</li>
+                        <li>Minimum Order Quanity: 100 SQFT</li>
+                        <li>Price : 100 INR/Square Foot</li>
+                    </ul>
+                    <p class="product-price"></p>
+                    @*<a asp-action="details" asp-controller="home" class="btn btn-primary btn-lg btn-block">Request for a call</a>*@
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#contactFormModal">
+                        Open Contact Form
+                    </button>
+                    <div class="modal fade" id="contactFormModal" tabindex="-1" aria-labelledby="contactFormModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="contactFormModalLabel">Contact Us</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <partial name="_ClientForm" />
+                                @*<div class="modal-body">
+            <form asp-controller="home" asp-action="formSubmit" method="post">
+                <div class="form-group">
+                    <label asp-for="name">Name</label>
+                    <input asp-for="name" class="form-control" placeholder="Enter your name" />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="contactNumber">Contact Number</label>
+                    <input asp-for="contactNumber" class="form-control" id="contactNumber" placeholder="Enter your contact number" />
+                    <span asp-validation-for="contactNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="emailAddress">Email Address</label>
+                    <input asp-for="emailAddress" class="form-control" id="emailAddress" placeholder="Enter your email address" />
+                    <span asp-validation-for="emailAddress" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="purpose">Purpose</label>
+                    <input asp-for="purpose" class="form-control" id="purpose" rows="3" placeholder="Enter the purpose of your message" />
+                    <span asp-validation-for="purpose" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

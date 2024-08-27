@@ -1,0 +1,26 @@
+﻿@model ClientProject.ViewModels.FormSubmitViewModel;
+<div class="modal-body">
+    <form asp-controller="home" asp-action="formSubmit" method="post">
+        <div class="form-group">
+            <label asp-for="name">Name</label>
+            <input asp-for="name" class="form-control" placeholder="Enter your name" />
+            <span asp-validation-for="name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="contactNumber">Contact Number</label>
+            <input asp-for="contactNumber" class="form-control" id="contactNumber" placeholder="Enter your contact number" />
+            <span asp-validation-for="contactNumber" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="emailAddress">Email Address</label>
+            <input asp-for="emailAddress" class="form-control" id="emailAddress" placeholder="Enter your email address" />
+            <span asp-validation-for="emailAddress" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="purpose">Purpose</label>
+            <input asp-for="purpose" class="form-control" id="purpose" rows="3" placeholder="Enter the purpose of your message" />
+            <span asp-validation-for="purpose" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+    </form>
+</div>

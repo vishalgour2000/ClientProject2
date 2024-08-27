@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Product Section</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .product-section {
+            padding: 50px 0;
+        }
+
+        .product-card {
+            transition: transform 0.3s;
+        }
+
+            .product-card:hover {
+                transform: translateY(-10px);
+            }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .product-card .btn {
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+            .product-card .btn:hover {
+                background-color: #0056b3;
+            }
+
+        .header-text {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container product-section">
+        <h1 class="header-text">Our Featured Products</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="/Images/OIP (2).jpg" class="card-img-top product-image" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">This is a brief description of Product 1. It has great features and quality.</p>
+                        <a href="/home/product1" class="btn btn-primary">Click to Enter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="/Images/OIP (2).jpg" class="card-img-top product-image" alt="Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 2</h5>
+                        <p class="card-text">This is a brief description of Product 2. It is known for its durability and style.</p>
+                        <a href="#" class="btn btn-primary">Click to Enter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="/Images/OIP (2).jpg" class="card-img-top product-image" alt="Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 3</h5>
+                        <p class="card-text">This is a brief description of Product 3. It offers excellent performance and value.</p>
+                        <a href="#" class="btn btn-primary">Click to Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
